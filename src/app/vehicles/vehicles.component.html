@@ -1,0 +1,10 @@
+<h1>Vehicles</h1>
+<dialog #dialog>
+  <app-modal #modalUrl></app-modal>
+  <button (click)="dialog.close()" (click)="modalUrl.clearModal()" mat-raised-button color="primary">Close</button>
+</dialog>
+<ul class="data-list">
+  <li *ngFor='let vehicle of vehicles' class="data-item">
+    <button (click)="modalUrl.getModal(vehicle.url)" (click)="dialog.show()" mat-raised-button color="primary">{{vehicle.name}}</button>
+  </li>
+</ul>
